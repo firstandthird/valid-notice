@@ -1,6 +1,6 @@
 /*!
  * valid-notice - Automatically call $.notice on form error
- * v0.0.0
+ * v0.0.1
  * https://github.com/firstandthird/valid-notice
  * copyright First + Third 2014
  * MIT License
