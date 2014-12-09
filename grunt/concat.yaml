@@ -1,0 +1,6 @@
+options:
+  banner: '<%= meta.banner %>'
+dist:
+  src:
+    - 'lib/<%= name %>.js'
+  dest: 'dist/<%= name %>.js'

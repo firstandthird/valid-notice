@@ -1,0 +1,10 @@
+default:
+  - script
+script:
+  - jshint
+  - concat
+  - uglify
+dev:
+  - default
+  - connect
+  - watch

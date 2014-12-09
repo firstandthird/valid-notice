@@ -1,0 +1,20 @@
+{
+  "name": "valid-notice",
+  "description": "Automatically call $.notice on form error",
+  "version": "0.0.0",
+  "homepage": "https://github.com/firstandthird/valid-notice",
+  "license": "MIT",
+  "copyright": "First + Third",
+  "main": "dist/valid-notice.js",
+  "ignore": [
+    "test",
+    "example",
+    "lib",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "notice": "~0.7.0",
+    "valid": "~0.3.0"
+  }
+}

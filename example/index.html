@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>valid-notice example</title>
+    <style>
+      label {
+        display: block;
+      }
+      input {
+        width: 98%;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <form action="#" method="post">
+      <label>Name: </label>
+      <input name="name" type="text" data-valid-required data-notice-error="Name is required"/>
+      <label>Email: </label>
+      <input type="text" data-valid-email name="email" value="" />
+      <label>Url: </label>
+      <input type="text" data-valid-url name="url" value="ftp://www.example.com/" />
+      <input type="submit" value="submit" />
+    </form>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/fidel/dist/fidel.js"></script>
+    <script src="../bower_components/valid/dist/valid.js"></script>
+    <script src="../bower_components/notice/dist/notice.js"></script>
+    <script src="../dist/valid-notice.js"></script>
+    <script>
+      var form = $('form');
+
+      form.valid({
+        customValidators: {
+          url: function(input) {
+            return this.custom(input, function(text) {
+              return text.indexOf('htt') === 0;
+            }, 'url');
+          }
+        }
+      }).validNotice();
+
+    </script>
+  </body>
+</html>
